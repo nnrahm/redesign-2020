@@ -1,0 +1,444 @@
+:root {
+    --heading-font: 'Playfair Display', serif;
+    --main-font: 'Open Sans', sans serif;
+    --main-textcolor: #000;
+    --secondary-textcolor: #9c9c9c;
+    --accent-color: #dfdfdf;
+    --bg-color: #fff;
+}
+
+html, body {
+    font: 300 18px var(--main-font);
+    color: var(--main-textcolor);
+    background: var(--bg-color);
+    width: 100vw;
+    min-height: 100vh;
+}
+
+body {    
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) repeat(6, 1fr);
+    grid-template-rows: 65px auto 40px;
+    grid-gap: 50px 40px;
+}
+
+main {
+    grid-column: 1 / 8;
+    padding: 0px 50px 0px;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-gap: 50px 20px;
+ }
+
+header {
+    background: var(--bg-color);
+    position: sticky;
+    position: -webkit-sticky;
+    top : 0;
+    height: 100%;
+    width: 100%;
+    grid-column: 1 / 8;
+    padding: 30px 0px 0px 0px;
+/*    margin-bottom: 50px;*/
+    z-index: 2;
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+}
+
+footer {
+    grid-column: 1 / 8;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h1.porttitle, h1.category {
+    grid-column: 1 / 8;
+    font: 700 5em var(--heading-font);
+    margin: 3px;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.emph-text p {
+    font: 300 1.2em var(--main-font);
+}
+
+.emph-text h3 {
+}
+
+.about {
+    grid-column: 5 / 6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-textcolor);
+    position: relative;
+    z-index: 1;
+}
+
+a:hover {
+    color: var(--bg-color);
+    transition: .3s ease-in;
+}
+
+a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -3px;
+    padding: 0px 3px 0px;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top center;
+    background: black;
+    z-index: -1;
+    transition: transform .2s;
+}
+
+a:hover::after {
+    transform: scaleY(1);
+}
+
+img {
+    width: 100%;
+    opacity .9;
+}
+
+.social {    
+    grid-column: 1 / 8;
+    padding: 10px;
+    display: inline-block;
+}
+
+.social a {
+    margin-right: 10px;
+}
+
+/*----------------- NAVIGATION MENU -----------------*/
+#logo {
+    max-width: 50px;
+    float: left;
+    margin: 0px 40px 0px 50px;
+}
+
+.nav {
+    list-style: none;
+    font: 300 1.3em var(--main-font);
+    margin: 0 auto;
+}
+
+.nav li {
+    float: left;
+    margin: 0px 30px 15px 0px;
+}
+
+.nav a {
+    padding: 5px;
+    color: var(--main-textcolor); 
+}
+
+.nav a:hover {
+    color: var(--secondary-textcolor);
+    transition: .15s ease-out;
+    background: transparent;
+}
+
+.nav a:after {
+    display: none;
+}
+
+/*----------------- SPLASH / LANDING PAGE -----------------*/
+
+.splash-text, .splash-textblack {
+    grid-column: 4 / 6;
+    grid-row: 1;
+    margin-top: 85px;
+}
+
+.splash-text {
+    mix-blend-mode: overlay;
+    z-index: 2;
+}
+
+.splash-textblack {
+    z-index: 0;
+}
+
+.splash-img {
+    grid-column: 2 / 6;
+    grid-row: 1;
+    margin-top: 30px;
+    max-width: 800px;
+    z-index: 1;
+}
+
+.splash-text h1, h2, .splash-textblack h1, h2 {
+    padding: 0;
+    margin: 0;
+}
+
+/*----------------- ABOUT PAGE -----------------*/
+
+.about-img {
+    object-fit: cover;
+    object-position: center bottom;
+    grid-column: 1 / 4;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.about {
+    grid-column: 5 / 8;
+}
+
+/*----------------- PORTFOLIO PAGE -----------------*/
+
+.port-img {
+    object-fit: cover;
+    object-position: 0 0;
+    grid-column: 1 / 4;
+    max-height: 400px;
+}
+
+.port-text {
+    grid-column: 5 / 8;
+}
+
+h3.description {
+    position: relative;
+    z-index: 1;
+}
+
+h3.description:before {
+    border-top: 8px solid var(--accent-color);
+    content:"";
+    margin: 0 auto;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1; 
+}
+
+.port-text h2 {
+    padding: 0px;
+}
+
+/*----------------- FRANCIS TUTTLE PAGE -----------------*/
+
+.ftsubgrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 70px 60px;
+}
+
+.fthw h3 {
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.ftnav {
+    grid-column: 1 / 3;
+}
+
+.fthw {
+    grid-column: 3 / 8;
+}
+
+.ftnavlink {
+    list-style: none;
+    padding: 0;    
+}
+
+.ftnavlink li {
+    padding: 15px 15px 15px 0px;
+    border-bottom: 1px solid #000;
+}
+
+.ftnavlink a {
+    display: block;}
+
+.ftnavlink li a:hover {
+    color: #000;
+}
+
+.ftnavlink a:after {
+    display: none;
+}
+
+/*----------------- MEDIA QUERIES -----------------*/
+
+/*------ MOBILE -----*/
+@media screen and (min-width: 360px) and (max-width: 600px) {
+    html, body {
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    body {
+        grid-template-rows: 100px auto 40px;
+        grid-gap: 40px 20px;        
+    }
+
+    main {
+        grid-column: 1 / 8;
+        overflow-y: auto;
+    }
+    
+    .content {
+        grid-gap: 20px 20px;
+    }
+    
+    header {
+        display: grid;
+        position: sticky;
+        grid-column: 1 / 8;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    h1 {
+        font-size: 3em;
+    }
+    
+    h2  {
+        font-size: 2em;
+    }
+    
+    h3 {
+        font-size: 1.5em;
+    }
+    
+    .nav {
+        clear: both;
+        font-size: 1em;
+        padding: 0;
+    }
+    
+    .nav li {
+        float: none;
+        margin: 0px 0px 20px 0px;
+        display: inline-block;
+    }
+    
+    .nav li a {
+        padding: 0px 7px 20px;
+    }
+    
+    .splash-textblack {
+        display: none;
+    }
+
+    .splash-img {
+        grid-column: 1 / 8;
+        grid-row: 2;
+        margin: 0;
+    }
+    
+    .splash-text {
+        grid-column: 1 / 8;
+        grid-row: 1;
+        margin: 0;
+        mix-blend-mode: normal;
+    }
+    
+    .splash-text h2 {
+    font-size: 1em;
+    }
+    
+    .port-text, .about {
+        grid-column: 1 / 8;
+        margin-bottom: 40px;
+    }
+    
+    .port-img {
+        grid-column: 1 / 8;
+        max-height: 200px;
+    }
+    
+    .about-img {
+        grid-column: 1 / 8;
+        max-height: 350px;
+        object-position: center;
+    }
+    
+    .port-img {
+        grid-column: 1 / 8;
+        max-height: 250px;
+        object-position: top;
+    }
+    
+    .contact {
+        grid-column: 1 / 8;
+    }
+    
+    .logo {
+        margin: 0 auto;
+        padding: 0px 40px 25px;    
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1365px) {
+    header {
+        margin-bottom: 40px;
+    }
+    
+    .nav li {
+        padding: 0px 10px;
+    }
+    
+    h1, h2, h4, h1.porttitle, h1.category {
+        font-size: 4em;
+    }
+    
+    h2, .emph-text h2 {
+        font-size: 2em;
+    }
+    
+    .emph-text contact h3 {
+        font-size: 2em;
+    }
+    
+    h3.description {
+        font-size: 1.5em;
+    }
+    
+    .splash-text, .splash-textblack {
+    font-size: 1em;
+    }
+    
+    .splash-img {
+        max-width: 550px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    html, body {
+        font-size: 16px;
+    }
+    
+    h3.description {
+        font-size: 1.5em;
+    }   
+}
