@@ -1,0 +1,54 @@
+
+body {
+    font-size: 16px;
+    line-height: 25px;
+	font-family: Georgia, Times, serif;
+	color:#333;
+	}
+
+article {
+	width:80%;
+	max-width:800px;
+	margin: auto;
+}
+/*http://modularscale.com/scale/?px1=16&px2=34&ra1=1.618&ra2=0*/
+
+h1 {
+    font-size: 67px;
+    line-height: 67px;
+    margin: 67px 0 0 0;
+	text-align: center;
+}
+
+h2 {
+    font-size: 41px;
+    line-height: 41px;
+    margin: 16px 0;
+	font-style: italic;
+	color:#545454;
+	text-align: center;
+
+}
+
+h3 {
+    font-size: 16px;
+    margin: 16px 0;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: Helvetica, Verdana, sans-serif;
+	color:#5a7792;
+	text-align: center;
+}
+
+p {
+
+}
+
+p:nth-of-type(1):first-letter { 
+    font-size: 109px;
+    line-height: 82px;
+	float: left; 
+	color:#47a6ff; 
+	padding: 0px 6px 0px 4px; 
+ }
+

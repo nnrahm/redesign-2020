@@ -123,6 +123,10 @@ img {
     opacity .9;
 }
 
+a.logolink, svg#logo:hover, a.logolink:after {
+    background: var(--bgcolor);
+}
+
 .social {    
     grid-column: 1 / 8;
     padding: 10px;
@@ -138,6 +142,10 @@ img {
     max-width: 50px;
     float: left;
     margin: 0px 40px 0px 50px;
+}
+
+a .logolink:hover {
+    background: transparent;
 }
 
 .nav {
@@ -393,9 +401,10 @@ h3.description:before {
         grid-column: 1 / 8;
     }
     
-    .logo {
+    #logo {
+        float: none;
         margin: 0 auto;
-        padding: 0px 40px 25px;    
+        padding: 0px 40px 25px;  
     }
 }
 
